@@ -15,15 +15,25 @@ Window {
         repeat: true
         onTriggered: {
             progressBar.value = progressBar.value + Math.random() * 0.1
+            circularProgressIndicator.value = circularProgressIndicator.value + Math.random() * 0.1
         }
     }
 
-    CustomProgressBar {
-        id: progressBar
+
+    ColumnLayout {
         anchors.centerIn: parent
-        width: 200
-        height: 5
-        value: 0.0
+        LinearProgressIndicator {
+            id: progressBar
+            width: 200
+            height: 5
+            value: 0.0
+        }
+        CircularProgressIndicator {
+            id: circularProgressIndicator
+            width: 200
+            height: 200
+            value: 0.0
+        }
     }
     
 }
