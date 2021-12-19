@@ -1,0 +1,6 @@
+*.pro.user
+*.stash
+*.o
+qmlcomponents
+Makefile
+qrc_qml.cpp
